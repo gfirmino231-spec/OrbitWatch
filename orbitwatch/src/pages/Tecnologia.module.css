@@ -196,22 +196,20 @@
 }
 
 .flowGrid {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
 }
 
 .flowItem {
   display: flex;
-  align-items: center;
-  gap: 0;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .flowCard {
   position: relative;
-  width: 170px;
+  width: 100%;
   padding: var(--space-xl) var(--space-lg);
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-subtle);
@@ -273,10 +271,7 @@
 }
 
 .flowArrow {
-  font-size: 1.2rem;
-  color: var(--color-text-muted);
-  padding: 0 var(--space-sm);
-  flex-shrink: 0;
+  display: none;
 }
 
 /* Sensors Table */
@@ -353,8 +348,8 @@
 @media (max-width: 1100px) {
   .agencyCard { grid-template-columns: 1fr; }
   .agencyRight { display: none; }
-  .flowGrid { gap: var(--space-sm); }
-  .flowCard { width: 150px; }
+  .flowGrid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .flowCard { width: 100%; }
   .table { overflow-x: auto; }
   .tableHeader, .tableRow {
     grid-template-columns: 70px 160px 90px 60px 1fr;
@@ -363,6 +358,6 @@
 }
 
 @media (max-width: 768px) {
-  .flowCard { width: 130px; }
-  .flowArrow { padding: 0 4px; font-size: 0.9rem; }
+  .flowGrid { grid-template-columns: 1fr; }
+  .flowCard { width: 100%; }
 }
