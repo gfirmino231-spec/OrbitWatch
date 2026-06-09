@@ -1,0 +1,422 @@
+/* ===== STATS CARD ===== */
+.statsCard {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.statsCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-hover);
+}
+
+.statsCard.purple:hover { border-color: rgba(108, 99, 255, 0.4); }
+.statsCard.green:hover { border-color: rgba(0, 200, 150, 0.4); }
+.statsCard.red:hover { border-color: rgba(255, 77, 77, 0.4); }
+.statsCard.orange:hover { border-color: rgba(255, 140, 66, 0.4); }
+
+.statsIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.statsValue {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.purple .statsValue { color: var(--color-purple-light); }
+.green .statsValue { color: var(--color-green); }
+.red .statsValue { color: var(--color-red); }
+.orange .statsValue { color: var(--color-orange); }
+
+.statsLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.statsDelta {
+  font-size: 0.75rem;
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+.statsGlow {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.12;
+  transition: opacity var(--transition-base);
+}
+
+.purple .statsGlow { background: var(--color-purple); }
+.green .statsGlow { background: var(--color-green); }
+.red .statsGlow { background: var(--color-red); }
+.orange .statsGlow { background: var(--color-orange); }
+
+.statsCard:hover .statsGlow { opacity: 0.25; }
+
+/* ===== INFO CARD ===== */
+.infoCard {
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-hover);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+}
+
+.infoTag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  background: rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(108, 99, 255, 0.25);
+  border-radius: var(--radius-full);
+  padding: 2px 10px;
+  margin-bottom: var(--space-md);
+}
+
+.infoTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.infoDesc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* ===== ALERT CARD ===== */
+.alertCard {
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.alertCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.alert-red { border-left: 3px solid var(--color-red); }
+.alert-orange { border-left: 3px solid var(--color-orange); }
+.alert-yellow { border-left: 3px solid var(--color-yellow); }
+.alert-green { border-left: 3px solid var(--color-green); }
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.alertType {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.alertRisk {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.risk-red { background: rgba(255,77,77,0.15); color: var(--color-red); border: 1px solid rgba(255,77,77,0.3); }
+.risk-orange { background: rgba(255,140,66,0.15); color: var(--color-orange); border: 1px solid rgba(255,140,66,0.3); }
+.risk-yellow { background: rgba(255,209,102,0.15); color: var(--color-yellow); border: 1px solid rgba(255,209,102,0.3); }
+.risk-green { background: rgba(0,200,150,0.15); color: var(--color-green); border: 1px solid rgba(0,200,150,0.3); }
+
+.alertId {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+  margin-bottom: 4px;
+}
+
+.alertRegion {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.alertDesc {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.alertMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.alertFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.alertPopulation {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+}
+
+.alertStatus {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.statusActive {
+  color: var(--color-red);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== SATELLITE CARD ===== */
+.satCard {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.satCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(108, 99, 255, 0.3);
+  box-shadow: var(--shadow-hover);
+}
+
+.satCard:hover .satGlow { opacity: 0.08; }
+
+.satHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.satIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 99, 255, 0.08);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+.satAgency {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-purple);
+  text-transform: uppercase;
+}
+
+.satStatus {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.satDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.satOnline {
+  background: var(--color-green);
+  box-shadow: 0 0 6px rgba(0, 200, 150, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.satName {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.satSensor {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+  margin-bottom: var(--space-lg);
+}
+
+.satStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.satStat {
+  text-align: center;
+}
+
+.satStatVal {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.satStatLabel {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+}
+
+.satApps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.satApp {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+}
+
+.satGlow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--sat-color, #6C63FF);
+  opacity: 0.04;
+  transition: opacity var(--transition-base);
+}
+
+/* ===== DASHBOARD CARD ===== */
+.dashCard {
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.dashCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.dash-red { border-top: 2px solid var(--color-red); }
+.dash-green { border-top: 2px solid var(--color-green); }
+.dash-orange { border-top: 2px solid var(--color-orange); }
+.dash-purple { border-top: 2px solid var(--color-purple); }
+
+.dashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.dashIcon {
+  font-size: 1.5rem;
+}
+
+.dashTrend {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.trend-up { background: rgba(255,77,77,0.15); color: var(--color-red); }
+.trend-down { background: rgba(0,200,150,0.15); color: var(--color-green); }
+.trend-stable { background: rgba(108,99,255,0.15); color: var(--color-purple); }
+
+.dashValue {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.dash-red .dashValue { color: var(--color-red); }
+.dash-green .dashValue { color: var(--color-green); }
+.dash-orange .dashValue { color: var(--color-orange); }
+.dash-purple .dashValue { color: var(--color-purple-light); }
+
+.dashUnit {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.dashTitle {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}

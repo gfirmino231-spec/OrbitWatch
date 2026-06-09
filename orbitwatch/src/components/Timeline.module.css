@@ -1,0 +1,137 @@
+.timeline {
+  position: relative;
+  padding: var(--space-xl) 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-purple), var(--color-green), transparent);
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+  width: 45%;
+  margin-bottom: var(--space-2xl);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.item.left {
+  margin-right: auto;
+  padding-right: var(--space-xl);
+}
+
+.item.right {
+  margin-left: auto;
+  padding-left: var(--space-xl);
+  text-align: right;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left .dot {
+  right: -8px;
+  top: var(--space-lg);
+  transform: translateX(50%);
+}
+
+.right .dot {
+  left: -8px;
+  top: var(--space-lg);
+  transform: translateX(-50%);
+}
+
+.dotInner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.card {
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.year {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-purple);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.desc {
+  font-size: 0.84rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.stat {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .line {
+    left: 16px;
+  }
+
+  .item {
+    width: 100%;
+    padding-left: var(--space-3xl);
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .item.left,
+  .item.right {
+    padding-left: var(--space-3xl);
+    padding-right: 0;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .left .dot,
+  .right .dot {
+    left: 8px;
+    right: auto;
+    transform: translateX(0);
+  }
+}

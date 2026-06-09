@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0A192F" stroke="#6C63FF" stroke-width="2"/>
+  
+  <!-- Outer orbit ring -->
+  <ellipse cx="32" cy="32" rx="26" ry="10" stroke="#6C63FF" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7" transform="rotate(-30 32 32)"/>
+  
+  <!-- Inner orbit ring -->
+  <ellipse cx="32" cy="32" rx="18" ry="7" stroke="#00C896" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6" transform="rotate(20 32 32)"/>
+  
+  <!-- Central planet -->
+  <circle cx="32" cy="32" r="8" fill="#6C63FF" opacity="0.9"/>
+  <circle cx="29" cy="29" r="2.5" fill="white" opacity="0.3"/>
+  
+  <!-- Satellite on outer orbit -->
+  <circle cx="54" cy="26" r="3" fill="#00C896"/>
+  <rect x="56" y="24.5" width="5" height="3" rx="0.5" fill="#00C896" opacity="0.7"/>
+  <rect x="49" y="24.5" width="5" height="3" rx="0.5" fill="#00C896" opacity="0.7"/>
+  
+  <!-- Satellite on inner orbit -->
+  <circle cx="16" cy="38" r="2.5" fill="#FF4D4D"/>
+  
+  <!-- Signal dots -->
+  <circle cx="32" cy="6" r="2" fill="#6C63FF" opacity="0.5"/>
+  <circle cx="32" cy="58" r="2" fill="#6C63FF" opacity="0.5"/>
+</svg>

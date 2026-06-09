@@ -1,0 +1,124 @@
+.map {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: rgba(0,0,0,0.2);
+}
+
+.mapTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.liveIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 8px rgba(0, 200, 150, 0.6);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.mapControls {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.mapBtn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mapBtn:hover {
+  background: rgba(108, 99, 255, 0.15);
+  color: var(--color-text-primary);
+  border-color: rgba(108, 99, 255, 0.3);
+}
+
+.mapBody {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  background: radial-gradient(ellipse at center, rgba(10, 35, 70, 0.8) 0%, rgba(6, 15, 28, 0.95) 100%);
+}
+
+.mapSvg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.scanLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 150, 0.4), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+}
+
+.coords {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-md);
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.68rem;
+  font-family: monospace;
+  color: rgba(108, 99, 255, 0.5);
+}
+
+.mapLegend {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border-subtle);
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.compact .mapBody {
+  min-height: 180px;
+}
