@@ -277,9 +277,7 @@ Timeline alternada esquerda/direita de eventos, responsiva (stacking em mobile).
 
 | Nome | RM | Turma |
 |------|----|-------|
-| Integrante 1 | RM000000 | - |
-| Integrante 2 | RM000000 | - |
-| Integrante 3 | RM000000 | - |
+| Gustavo Firmino Barbosa  | RM566903 | 1ESPS |
 
 ---
 
@@ -291,7 +289,7 @@ Este projeto foi desenvolvido para fins acadêmicos – **FIAP Global Solution 2
 
 <div align="center">
 
-Feito com ☕ e 🛰️ por alunos da FIAP
+Feito com ☕ e 🛰️ por ALUNOOOOO da FIAP
 
 **[⬆ Voltar ao topo](#-orbitwatch--inteligência-climática-vinda-do-espaço)**
 
